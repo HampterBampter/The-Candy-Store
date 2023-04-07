@@ -53,10 +53,7 @@ function playRound(player1, player2) {
         return player2
     }
 }
-player1.name = 'Hampter Bampter';
-player2.name = 'Glam Sally';
-player3.name = 'Sweeaboo';
-player4.name = 'Monito';
+
 // let numberOfWins = 3 
 // let playUntil = 3
 // while (player1.wins < numberOfWins && player2.wins < numberOfWins) {
@@ -81,7 +78,11 @@ player4.name = 'Monito';
     let game3 = playGame(game1, game2, playUntil);
     console.log(`${game3.name} is the world champion!`)
  }
- playTournament(player1, player2, player3, player4, 5)
+player1.name = 'Hampter Bampter';
+player2.name = 'Glam Sally';
+player3.name = 'Sweeaboo';
+player4.name = 'Monito';
+playTournament(player1, player2, player3, player4, 5)
 
 
 

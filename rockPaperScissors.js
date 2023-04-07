@@ -18,7 +18,7 @@ let playerTwo = {
 
 function playRound(playerOne, playerTwo) {
     playerOne.getHand = getHand();
-    playerOne.getHand = getHand();
+    playerTwo.getHand = getHand();
 
     if (playerOne.getHand == playerTwo.getHand) {
         console.log(`${playerOne.name}:${playerOne.wins} played ${playerOne.getHand}`)

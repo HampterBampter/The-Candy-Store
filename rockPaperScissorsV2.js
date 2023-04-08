@@ -54,38 +54,30 @@ function playRound(player1, player2) {
     }
 }
 
-// let numberOfWins = 3 
-// let playUntil = 3
-// while (player1.wins < numberOfWins && player2.wins < numberOfWins) {
-//     playRound(player1, player2);
-// }
-    function playGame(player1, player2, playUntil){
-        while (player1.wins < playUntil && player2.wins < playUntil) {
-                 playRound(player1, player2);
-        }       
-        if (player1.wins > player2.wins){
-            return player1;
-        }
-        else{
-            return player2;
-        }
+function playGame(player1, player2, playUntil) {
+    player1.wins = 0;
+    player2.wins = 0;
+    while (player1.wins < playUntil && player2.wins < playUntil) {
+        playRound(player1, player2);
+    }
+    if (player1.wins > player2.wins) {
+        return player1;
+    }
+    else {
+        return player2;
+    }
 }
-    
-    
- function playTournament(player1, player2, player3, player4, playUntil){
+
+function playTournament(player1, player2, player3, player4, playUntil) {
     let game1 = playGame(player1, player2, playUntil);
     let game2 = playGame(player3, player4, playUntil);
     let game3 = playGame(game1, game2, playUntil);
     console.log(`${game3.name} is the world champion!`)
- }
+}
+
 player1.name = 'Hampter Bampter';
 player2.name = 'Glam Sally';
 player3.name = 'Sweeaboo';
 player4.name = 'Monito';
 playTournament(player1, player2, player3, player4, 5)
-
-
-
-
-
 

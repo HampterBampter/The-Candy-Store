@@ -49,7 +49,7 @@ class JobListing extends Job {
 
 //instances of job class
 let job1 = new Job('Financial Auditor', 'Accounting', 'Yes', 'Audit');
-let job2 = new Job('Developer', 'technology', 'no', 'Software Engineering');
+let job2 = new Job('Developer', 'Technology', 'No', 'Software Engineering');
 let job3 = new Job('Cashier', 'Service', 'No', 'Retail');
 let listing1 = new JobListing('Tax Associate', 'Accounting', 'Yes', 'Tax', 'Deloitte', '$60,000', 'FullTime', '2');
 

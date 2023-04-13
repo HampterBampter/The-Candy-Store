@@ -1,33 +1,30 @@
-let photoSlideShow = function() {
-    photoList = [1,2,3,4];
-    currentPhotoIndex = [1];
-    nextPhoto = function(){
-        if (photoList.length > currentPhotoIndex >= 1){
-            return this.currentPhotoIndex++;
+let photoSlideShow = {
+    photoList: ['photo1','photo2','photo3', 'photo4'],
+    currentPhotoIndex: 0,
+    nextPhoto(){
+        if (this.photoList.length-1 > this.currentPhotoIndex && this.currentPhotoIndex >= 0){
+            this.currentPhotoIndex++;
+            console.log(this.getCurrentPhoto());
         }
-        if(currentPhotoIndex = photoList.length){ 
+        else{ 
             console.log('End of slideshow');
-            return currentPhotoIndex
+        }
+    },
+    prevPhoto(){
+        if (this.photoList.length-1 >= this.currentPhotoIndex && this.currentPhotoIndex > 0){
+            this.currentPhotoIndex--;
+            console.log(this.getCurrentPhoto());
         }
         else{
-
-        }
-    };
-    prevPhoto = function(){
-        if (photoList.length >= currentPhotoIndex > 1){
-            return this.currentPhotoIndex--;
-        }
-        if (currentPhotoIndex = 1){
             console.log('Begin slide show');
         }
-        else{
-
-        }
-    };
-    getCurrentPhoto = function(){
-        console.log(currentPhotoIndex);
-    };
+    },
+    getCurrentPhoto(){
+        return (this.photoList[this.currentPhotoIndex]);
+    },
 }
 
-photoSlideShow.nextPhoto;
-photoSlideShow.getCurrentPhoto;
+photoSlideShow.nextPhoto();
+photoSlideShow.prevPhoto();
+photoSlideShow.prevPhoto();photoSlideShow.prevPhoto();
+photoSlideShow.getCurrentPhoto();

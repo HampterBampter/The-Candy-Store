@@ -26,14 +26,14 @@ displayCart = function(){
 }
 
 let submitButton = function (){
-    let itemName = document.getElementById("itemName");
-    let itemPrice = document.getElementById("itemPrice");
-    addItem(itemName.value, itemPrice.value);
+    let itemName = document.getElementById("itemName").value;
+    let itemPrice = document.getElementById("itemPrice").value;
+    addItem = {itemName, itemPrice};
 }
 let addItemForm = document.getElementById("addItemForm");
-addItemForm.addEventListener("click", submitButton());
+addItemForm.addEventListener("click", submitButton);
 
 let displayCartButton = document.getElementById("displayCartButton");
-displayCartButton.addEventListener("click", displayCart());
+displayCartButton.addEventListener("click", displayCart);
 
 

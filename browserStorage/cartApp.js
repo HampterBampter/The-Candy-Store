@@ -25,13 +25,15 @@ displayCart = function(){
     console.log(cart);
 }
 
-let submitButton = function (){
+let submitButton = function (event){
+    event.preventDefault();
     let itemName = document.getElementById("itemName").value;
     let itemPrice = document.getElementById("itemPrice").value;
-    addItem = {itemName, itemPrice};
+    addItems = {itemName, itemPrice};
+    addItem(addItems);
 }
 let addItemForm = document.getElementById("addItemForm");
-addItemForm.addEventListener("click", submitButton);
+addItemForm.addEventListener("submit", submitButton);
 
 let displayCartButton = document.getElementById("displayCartButton");
 displayCartButton.addEventListener("click", displayCart);

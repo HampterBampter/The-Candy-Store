@@ -1,20 +1,22 @@
 let addItem = function(){
     let toDoList = document.getElementById("toDoList");
     let listItem = document.getElementById("listItem").value;
-    listItem.value = "";
-    let newList = document.createElement(listItem);
-    toDoList.appendChild(newList);
+    document.getElementById("listItem").value = "";
+    let newListItem = document.createElement("li");
+    newListItem.textContent = listItem
+    toDoList.appendChild(newListItem);
 }
-let remove = function(forRemoval){
-    if (forRemoval.matches("toDoList")){
-    forRemoval.childElement.remove();
-}
+let remove = function(event){
+    forRemoval = event.target;
+    if (forRemoval.matches("li")){
+    forRemoval.remove();
+    }
 };
 
 toDoList.addEventListener("click", remove);
 
 
-let button = document.getElementById("button");
-button.addEventListener("submit", addItem);
+let submitButton = document.getElementById("submit");
+submitButton.addEventListener("click", addItem);
 
 

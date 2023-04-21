@@ -81,9 +81,9 @@ let updateTitle = function(){
 
 let deletePost = function(){
         clear();
-        fetch('http://jsonplaceholder.typicode.com/posts/12'), {
+        fetch('http://jsonplaceholder.typicode.com/posts/12', {
             method: 'DELETE',
-        }
+        })
     .then(() => ('successfully deleted'))
     .catch((error) => console.log(`'error:' ${error}`))
 }

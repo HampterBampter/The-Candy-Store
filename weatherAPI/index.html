@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,26 +8,22 @@
     <title>Weather</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
 
     <h2>Weather App</h2>
-   
-    <div>
-        <div class="card">
-            <h4>Enter zip code for local weather information</h5>
-            <form>
-                <input type="text" id="enterZip" placeholder="Type zip code" required>
-                <button type="submit" id="button">Get weather</button>
-            </form>
-        </div>
 
-        <div class="card" id="addResults">
-            <p id="currentDate"></p>
-            <p id="city"></p>
-            <p id="currentTemp"></p>
-            <p id="currentCond"></p>
-            <p id="tempHiLow"></p>
-        </div>
+    <div class="card">
+        <h4>Enter zip code for local weather information</h5>
+
+        <input type="text" id="enterZip" placeholder="Type zip code" required>
+        <button type="submit" id="button">Get weather</button>
+
+        <p id="city"></p>
+        <p id="currentTemp"></p>
+        <p id="currentCond"></p>
+        <p id="tempHiLow"></p>
+        <p id="currentDate"></p>
     </div>
 
     <script src="weather.js"></script>

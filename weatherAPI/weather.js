@@ -9,16 +9,13 @@ let currentTemp = document.getElementById('currentTemp');
 let currentCond = document.getElementById('currentCond');
 let tempHiLow = document.getElementById('tempHiLow');
 
-
 let pasteResults = async function (data) {
-    currentDate.innerHTML = data.dt;
-    city.innerHTML = data.name;
-    currentTemp.innerHTML = data.main.temp;
-    currentCond.innerHTML = data.weather.description;
+    let currDate = new Date(data.dt*1000)
+    currentDate.innerHTML = `Current Date: ${currDate.toLocaleString()}`;
+    city.innerHTML = `City Name: ${data.name}`;
+    currentTemp.innerHTML = `Current Temp: ${data.main.temp}`;
+    currentCond.innerHTML = `Current Conditions: ${data.weather[0].description}`;
     tempHiLow.innerHTML = `Temperature Low: ${data.main.temp_min} High: ${data.main.temp_max}`;
-
-
-
 
 }
 
@@ -34,8 +31,8 @@ let getWeather = async function (zipCode) {
 
 let button = document.getElementById('button');
 button.addEventListener('click', () => {
-    // let zipCode = document.getElementById('zipCode').value;
-    getWeather('55444');
+    let zipCode = document.getElementById('enterZip').value;
+    getWeather(zipCode);
 });
 
 
